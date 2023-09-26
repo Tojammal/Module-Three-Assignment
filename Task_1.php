@@ -1,20 +1,20 @@
 <?php
 $text = "The quick brown fox jumps over the lazy dog.";
+function newText($text) {
+    
+    $lowercaseText = strtolower($text);
+
+    // Replace "brown" with "red" in the string
+    $modifiedText = str_replace('brown', 'red', $lowercaseText);
+
+    return $modifiedText;
+}
+
+// Initial string
 
 
-// Convert the string to all lowercase.
+// Call the function to modify the text
+$modifiedText = newText($text);
 
-$convert = strtolower($text);
-echo $convert,"<br/>";
-
-
-
-// Replace "brown" with "red" in the string.
-
-$string = strtr($text,[
-    "brown" => "red"
-]);
-
-// Print the modified text.
-
-echo $string;
+// Print the modified text
+echo $modifiedText;
